@@ -9,8 +9,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-password', component: ResetpasswordComponent },
-  { path: 'users/verify/account/:key', component: VerifyComponent },
-  { path: 'users/verify/password/:key', component: VerifyComponent }
+  { path: 'user/verify/account/:key', component: VerifyComponent },
+  { path: 'user/verify/password/:key', component: VerifyComponent },
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
