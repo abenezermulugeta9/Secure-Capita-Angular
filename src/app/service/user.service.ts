@@ -9,10 +9,10 @@ import { Profile } from '../interface/profile';
 })
 export class UserService {
 
-  private server: string = '';
+  private server: string = 'http://localhost :8081';
   constructor(private http: HttpClient) { }
 
-  login(email: string, password: string): Observable<CustomHttpResponse<Profile>> {
+  login$(email: string, password: string): Observable<CustomHttpResponse<Profile>> {
     return this.http.post<CustomHttpResponse<Profile>>(`${this.server}/users/login`, { email, password })
       .pipe(tap(console.log), catchError(this.handleError));
   }

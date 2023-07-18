@@ -8,6 +8,7 @@ import { LoginComponent } from './component/login/login.component';
 import { VerifyComponent } from './component/verify/verify.component';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { HttpClientModule } from  '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from  '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
